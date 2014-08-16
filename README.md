@@ -10,7 +10,8 @@ $ go get github.com/kyokomi/web-scraping-example
 
 ```sh
 $ mkdir -p ~/.web-scraping-example
-$ curl -O https://raw.githubusercontent.com/kyokomi/web-scraping-example/master/example/config.json ~/.web-scraping-example/config.json
+$ cd ~/.web-scraping-example
+$ curl -O https://raw.githubusercontent.com/kyokomi/web-scraping-example/master/example/config.json
 ```
 
 ## Output
