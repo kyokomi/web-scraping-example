@@ -3,27 +3,30 @@ package main
 import (
 	"fmt"
 
+	"net/url"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
 type PageSetting struct {
-	BaseUrl    string       `json:"baseUrl"`
-	Query      string       `json:"query"`
-	FindKey    string       `json:"findKey"`
-	ImgFindKey string       `json:"imgFindKey"`
+	BaseUrl    string `json:"baseUrl"`
+	Query      string `json:"query"`
+	FindKey    string `json:"findKey"`
+	ImgFindKey string `json:"imgFindKey"`
 }
 
 func (p PageSetting) Url(keyword string) string {
 	return p.BaseUrl + p.Query + keyword
 }
 
-func (p PageSetting) GetImagePaths(keyword string) ([]string) {
-	url := p.Url(keyword)
-	fmt.Printf("startUrl = %s\n", url)
+func (p PageSetting) GetImagePaths(keyword string) []string {
+	u := &url.URL{Path: p.Url(keyword)}
+	fmt.Printf("startUrl = %s\n", u.String())
 	if p.FindKey != "" {
-		return newDocumentUrl(url, p.FindKey, p.ImgFindKey)
+
+		return newDocumentUrl(u.String(), p.FindKey, p.ImgFindKey)
 	} else {
-		return newDocumentImage(url, p.ImgFindKey)
+		return newDocumentImage(u.String(), p.ImgFindKey)
 	}
 }
 

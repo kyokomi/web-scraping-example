@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"strings"
 	"sync"
-	"log"
-	"io/ioutil"
 )
 
 func main() {

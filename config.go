@@ -9,7 +9,7 @@ import (
 
 type ImageLoadConfig struct {
 	Keyword      string        `json:"keyword"`
- 	OutputDir    string        `json:"outputDir"`
+	OutputDir    string        `json:"outputDir"`
 	PageSettings []PageSetting `json:"pageSettings"`
 }
 
