@@ -1,5 +1,7 @@
 # web-scraping-example Go (golang)
 
+[![Build Status](https://drone.io/github.com/kyokomi/web-scraping-example/status.png)](https://drone.io/github.com/kyokomi/web-scraping-example/latest)
+
 ## Install
 
 ```sh
