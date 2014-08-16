@@ -14,6 +14,23 @@ $ cd ~/.web-scraping-example
 $ curl -O https://raw.githubusercontent.com/kyokomi/web-scraping-example/master/example/config.json
 ```
 
+### config.json Sample
+
+```
+{
+    "keyword": "ラブライブ",
+    "outputDir": "images",
+    "pageSettings": [
+        {
+            "baseUrl": "http://blog.livedoor.jp/nizigami/search",
+            "query": "?q=",
+            "findKey": ".article .article-body .article-continue a",
+            "imgFindKey": ".t_b img"
+        }
+    ]
+}
+```
+
 ## Output
 
 image in the `outputDir` of `config.json`
